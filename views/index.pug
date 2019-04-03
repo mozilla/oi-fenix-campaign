@@ -1,13 +1,48 @@
 extends layout
 
 block content
-  .container
-    h1 Some form...
+  header
+    a(href="/")
+      img(src="https://www.mozilla.org/media/img/logos/firefox/logo-quantum-wordmark-white-high-res.3ccf0070280e.png")
 
-    form(action="/create", method="POST", enctype="multipart/form-data")
-      label(for="test") Test
-      input(type="text", name="heading1")
-      input(type="text", name="test_field")
-      input(type="text", name="test_field2")
-      input(type="file", name="screenshot")
-      button(type="submit") Create Issue
+  .container
+    .toast.success
+      h2 Thank you for submitting this issue!
+      p Please keep continuing!
+    .toast.failure
+      h2 Something went wrong :(
+      p We're sorry.
+
+    .form-container
+      h1 Some form...
+
+      form(action="/create", method="POST", enctype="multipart/form-data")
+        div(class="input-group")
+          label(for="test") Test
+          input(type="text", name="heading1")
+        div(class="input-group")
+          label(for="test") Test
+          input(type="text", name="test_field")
+        div(class="input-group")
+          label(for="test") Test
+          input(type="text", name="test_field2")
+        div(class="input-group")
+          label(for="test") Test
+          input(type="file", name="screenshot")
+        button(type="submit") Create Issue
+
+  footer
+    a(href="https://mozilla.org")
+      img(src="https://www.mozilla.org/media/protocol/img/logos/mozilla/white.612a25fa976b.svg")
+    p Portions of this content are ©1998–2019 by individual mozilla.org contributors. Content available under a <a rel="license" href="https://mozilla.org/foundation/licensing/website-content/">Creative Commons license</a>.
+    ul
+      li
+        a(href="/privacy/") Privacy
+      li
+        a(href="/privacy/websites/") Website Privacy Notice
+      li
+        a(href="/privacy/websites/#cookies") Cookies
+      li
+        a(href="/about/legal/") Legal
+      li
+        a(href="/about/governance/policies/participation/") Community Participation Guidelines
