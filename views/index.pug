@@ -6,12 +6,14 @@ block content
       img(src="https://www.mozilla.org/media/img/logos/firefox/logo-quantum-wordmark-white-high-res.3ccf0070280e.png")
 
   .container
-    .toast.success
-      h2 Thank you for submitting this issue!
-      p Please keep continuing!
-    .toast.failure
-      h2 Something went wrong :(
-      p We're sorry.
+    if submitted && success
+      .toast.success
+        h2 Thank you for submitting this issue!
+        p Please keep continuing!
+    if submitted && !success
+      .toast.failure
+        h2 Something went wrong :(
+        p We're sorry.
 
     .form-container
       h1 Some form...

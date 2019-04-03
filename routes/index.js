@@ -7,9 +7,16 @@ const githubBackend = require('../lib/githubBackend');
 
 const router = express.Router();
 
+const { OWNER, REPO } = process.env;
+
 router.get('/', async (req, res) => {
   debug('INCOMING_REQUEST_INDEX');
-  res.render('index', {});
+  const issue = `https://github.com/${OWNER}/${REPO}/issues/${req.query.issue}`
+  res.render('index', {
+    success: /true/.test(req.query.success),
+    submitted: /true/.test(req.query.submitted),
+    issue,
+  });
 });
 
 router.post('/create', async (req, res) => {
@@ -17,10 +24,11 @@ router.post('/create', async (req, res) => {
   try {
     const fields = await formHandling.parseForm(req);
     const issueInfo = await githubBackend.createIssue(fields);
-    // TODO: redirect to form again with "thanks" and link to issue
-    res.json({ success: true, fields, issueInfo });
+    const issueNumber = issueInfo.data.number;
+    debug('ISSUE_CREATED', issueNumber);
+    res.redirect(`/?success=true&submitted=true&issue=${issueNumber}`);
   } catch(error) {
-    res.json({ success: false, error });
+    res.redirect('/?success=false&submitted=true');
   }
 });
 
