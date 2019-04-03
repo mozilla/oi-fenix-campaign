@@ -1,0 +1,16 @@
+{
+  "heading1": {
+    "heading": true,
+    "content": "# This is a test heading"
+  },
+  "test_field": {
+    "content": "**This is a test content:** "
+  },
+  "test_field2": {
+    "content": "**This is a normal content..:** "
+  },
+  "screenshot": {
+    "image": true,
+    "content": ""
+  }
+}

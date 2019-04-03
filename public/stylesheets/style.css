@@ -37,3 +37,7 @@ a:hover, a:visited {
 .container {
   padding: 0px 30px 30px 30px;
 }
+
+form input {
+  display: block;
+}

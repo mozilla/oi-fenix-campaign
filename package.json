@@ -6,6 +6,7 @@
     "start:server": "DEBUG=mozilla-fenix-campaign* node index.js"
   },
   "dependencies": {
+    "@octokit/rest": "^16.23.2",
     "debug": "^4.1.1",
     "express": "^4.16.4",
     "formidable": "^1.2.1",

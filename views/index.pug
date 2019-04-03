@@ -6,6 +6,8 @@ block content
 
     form(action="/create", method="POST", enctype="multipart/form-data")
       label(for="test") Test
-      input(id="test", type="text", name="test_field")
+      input(type="text", name="heading1")
+      input(type="text", name="test_field")
+      input(type="text", name="test_field2")
       input(type="file", name="screenshot")
       button(type="submit") Create Issue
