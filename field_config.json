@@ -1,16 +1,42 @@
 {
-  "heading1": {
+  "fenix": {
+    "content": "**Fenix Version:** "
+  },
+  "device": {
+    "content": "**Device:** "
+  },
+  "android": {
+    "content": "**Android Version:** "
+  },
+  "type": {
+    "content": "**Issue Type:** "
+  },
+  "reproduce": {
     "heading": true,
-    "content": "# This is a test heading"
+    "content": "# Steps to Reproduce"
   },
-  "test_field": {
-    "content": "**This is a test content:** "
+  "expected": {
+    "heading": true,
+    "content": "# Expected Behavior"
   },
-  "test_field2": {
-    "content": "**This is a normal content..:** "
+  "actual": {
+    "heading": true,
+    "content": "# Actual Behavior"
+  },
+  "otherbrowser": {
+    "heading": true,
+    "content": "# Tried in other browser"
+  },
+  "upcomingfeature": {
+    "heading": true,
+    "content": "# Wish for an upcoming feature"
   },
   "screenshot": {
     "image": true,
     "content": ""
+  },
+  "github": {
+    "heading": true,
+    "content": "# GitHub Username"
   }
 }

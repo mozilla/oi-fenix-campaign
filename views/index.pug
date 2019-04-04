@@ -16,21 +16,53 @@ block content
         p We're sorry.
 
     .form-container
-      h1 Some form...
+      h1 Report a Fenix bug
+
+      p Did you find a Web Compatibility bug? The website you’re visiting has a bug in Firefox but not in another browser? File your bug <a href="https://webcompat.com">here</a>.
 
       form(action="/create", method="POST", enctype="multipart/form-data")
         div(class="input-group")
-          label(for="test") Test
-          input(type="text", name="heading1")
+          label(for="fenix") Fenix Version*
+          input(id="fenix", type="text", name="fenix", required)
         div(class="input-group")
-          label(for="test") Test
-          input(type="text", name="test_field")
+          label(for="device") Device*
+          input(id="device", type="text", name="device", required)
         div(class="input-group")
-          label(for="test") Test
-          input(type="text", name="test_field2")
+          label(for="android") Android Version*
+          input(id="android", type="text", name="android", required)
         div(class="input-group")
-          label(for="test") Test
-          input(type="file", name="screenshot")
+          label(for="type") Issue Type*
+          select(id="type", name="type")
+            option(value="Crash") Crash
+            option(value="Language is not appearing properly") Language is not appearing properly
+            option(value="Non functional (Performance issues / slowness / loading)") Non functional (Performance issues / slowness / loading)
+            option(value="Functional (doesn’t behave as expected)") Functional (doesn’t behave as expected)
+            option(value="Android app related (bugs not inside the browser)") Android app related (bugs not inside the browser)
+            option(value="Other") Other
+        div(class="input-group")
+          label(for="reproduce") <strong>Steps to reproduce*</strong> - Write down everything you did immediately before you arrived at the bug as clearly as possible
+          textarea(name="reproduce", required)
+        div(class="input-group")
+          label(for="expected") <strong>Expected behavior*</strong> - What were you hoping/expecting the browser to do?
+          textarea(name="expected", required)
+        div(class="input-group")
+          label(for="actual") <strong>Actual behavior*</strong> - What was the actual result, what did the browser actually do?
+          textarea(name="actual", required)
+        div(class="input-group")
+          p Did you try this to another browser?*
+          label(for="otherbrowser-yes") Yes
+          input(id="otherbrowser-yes", name="otherbrowser", type="radio", value="yes")
+          label(for="otherbrowser-no") No
+          input(id="otherbrowser-no", name="otherbrowser", type="radio", value="no", checked)
+        div(class="input-group")
+          label(for="screenshot") Add a screenshot of what you see
+          input(id="screenshot", type="file", name="screenshot")
+        div(class="input-group")
+          label(for="upcomingfeature") Is there a feature you would like to see in the upcoming Firefox for Android release? Let us know here!
+          textarea(name="reproduce")
+        div(class="input-group")
+          label(for="github") Your GitHub account name if you have one
+          input(id="github", type="text", name="github")
         button(type="submit") Create Issue
 
   footer
