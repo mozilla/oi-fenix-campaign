@@ -38,7 +38,10 @@ block content
             option(value="Functional (doesn’t behave as expected)") Functional (doesn’t behave as expected)
             option(value="Android app related (bugs not inside the browser)") Android app related (bugs not inside the browser)
             option(value="Other") Other
-        p Did you find a Web Compatibility bug? The website you’re visiting has a bug in Firefox but not in another browser? File your bug <a href="https://webcompat.com">here</a>.
+        .big-padding
+          h2 Did you find a Web Compatibility bug?
+          p The website you’re visiting has a bug in Firefox but not in another browser? File your bug <a href="https://webcompat.com">here</a>.
+        h2 Issue Description
         div(class="input-group")
           label(for="upcomingfeature") Is there a feature you would like to see in the upcoming Firefox for Android release? Let us know here!
           textarea(name="upcomingfeature")
@@ -53,10 +56,13 @@ block content
           textarea(name="actual", required)
         div(class="input-group")
           p Did you try this to another browser?*
-          label(for="otherbrowser-yes") Yes
-          input(id="otherbrowser-yes", name="otherbrowser", type="radio", value="yes")
-          label(for="otherbrowser-no") No
-          input(id="otherbrowser-no", name="otherbrowser", type="radio", value="no", checked)
+          .choice-row
+            .choice
+              label(for="otherbrowser-yes") Yes
+              input(id="otherbrowser-yes", name="otherbrowser", type="radio", value="yes")
+            .choice
+              label(for="otherbrowser-no") No
+              input(id="otherbrowser-no", name="otherbrowser", type="radio", value="no", checked)
         div(class="input-group")
           label(for="screenshot") Add a screenshot of what you see
           input(id="screenshot", type="file", name="screenshot")

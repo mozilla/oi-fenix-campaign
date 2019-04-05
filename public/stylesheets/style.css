@@ -19,8 +19,8 @@ body {
 
 h1 {
   font-family: 'Zilla Slab', sans-serif;
-  padding-top: 30px;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 a {
@@ -55,12 +55,64 @@ header img {
 form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding-bottom: 50px;
 }
 
 form input {
   display: block;
+  min-height: 30px;
+  width: 75%;
+}
+
+form select {
+  width: 75%;
+}
+
+form textarea {
+  display: block;
+  min-height: 100px;
+  min-width: 75%;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.input-group label {
+  padding-bottom: 10px;
+}
+
+.input-group input[type="file"] {
+  text-align: center;
+}
+
+.input-group input[type="radio"] {
+  display: inline-block;
+}
+
+.input-group .choice-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.input-group .choice {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.input-group .choice:not(:first-child) {
+  margin-left: 50px;
+}
+
+.input-group .choice label {
+  padding-top: 11px;
+  padding-left: 17px;
 }
 
 button,
@@ -78,18 +130,6 @@ button:hover,
 .button:hover {
   background-color: #1c1b22;
   color: #fff;
-}
-
-.input-group {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 50px;
-}
-
-.input-group input {
-  margin-left: 20px;
-  width: 75%;
 }
 
 .toast {
@@ -136,4 +176,9 @@ footer ul li {
 
 .error-404 {
   text-align: center;
+}
+
+.big-padding {
+  padding-top: 30px;
+  padding-bottom: 50px;
 }
