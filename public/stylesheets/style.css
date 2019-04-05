@@ -35,7 +35,7 @@ a:hover {
 header {
   width: 100vw;
   padding: 24px;
-  background-color: #003eaa;
+  background-color: #1c1b22;
 }
 
 header img {
@@ -68,7 +68,7 @@ button,
   width: 75%;
   border-radius: 0;
   background-color: white;
-  border: 3px solid #003eaa;
+  border: 3px solid #1c1b22;
   padding: 20px 20px;
   cursor: pointer;
   font-weight: 600;
@@ -76,7 +76,7 @@ button,
 
 button:hover,
 .button:hover {
-  background-color: #003eaa;
+  background-color: #1c1b22;
   color: #fff;
 }
 
