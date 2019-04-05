@@ -1,42 +1,53 @@
 {
   "fenix": {
+    "id": 1,
     "content": "**Fenix Version:** "
   },
   "device": {
+    "id": 2,
     "content": "**Device:** "
   },
   "android": {
+    "id": 3,
     "content": "**Android Version:** "
   },
   "type": {
+    "id": 4,
     "content": "**Issue Type:** "
   },
   "upcomingfeature": {
+    "id": 10,
     "heading": true,
-    "content": "# Wish for an upcoming feature"
+    "content": "## Wish for an upcoming feature"
   },
   "reproduce": {
+    "id": 5,
     "heading": true,
-    "content": "# Steps to Reproduce"
+    "content": "## Steps to Reproduce"
   },
   "expected": {
+    "id": 6,
     "heading": true,
-    "content": "# Expected Behavior"
+    "content": "## Expected Behavior"
   },
   "actual": {
+    "id": 7,
     "heading": true,
-    "content": "# Actual Behavior"
+    "content": "## Actual Behavior"
   },
   "otherbrowser": {
+    "id": 8,
     "heading": true,
-    "content": "# Tried in other browser"
+    "content": "## Tried in other browser"
   },
   "screenshot": {
+    "id": 9,
     "image": true,
-    "content": ""
+    "content": "## Screenshot"
   },
   "github": {
+    "id": 11,
     "heading": true,
-    "content": "# GitHub Username"
+    "content": "## GitHub Username"
   }
 }
