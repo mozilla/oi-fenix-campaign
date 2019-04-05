@@ -98,6 +98,7 @@ label span {
 
 .input-group input[type="file"] {
   text-align: center;
+  border: none;
 }
 
 .input-group input[type="radio"] {
