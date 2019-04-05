@@ -20,18 +20,24 @@ block content
       h1 Report a Fenix bug
 
       form(action="/create", method="POST", enctype="multipart/form-data")
+        label Fields marked with <span>*</span> are required.
         div(class="input-group")
-          label(for="fenix") Fenix Version*
-          input(id="fenix", type="text", name="fenix", required)
+          label(for="fenix") Fenix Version
+            span &nbsp;*
+          input(id="fenix", type="text", name="fenix", required, placeholder="TODO, automatically")
         div(class="input-group")
-          label(for="device") Device*
-          input(id="device", type="text", name="device", required)
+          label(for="device") Device
+            span &nbsp;*
+          input(id="device", type="text", name="device", required, placeholder="What Android device are you using?")
         div(class="input-group")
-          label(for="android") Android Version*
-          input(id="android", type="text", name="android", required)
+          label(for="android") Android Version
+            span &nbsp;*
+          input(id="android", type="text", name="android", required, placeholder="TODO, automatically")
         div(class="input-group")
-          label(for="type") Issue Type*
+          label(for="type") Issue Type
+            span &nbsp;*
           select(id="type", name="type")
+            option(value="", selected, disabled) Select Type...
             option(value="Crash") Crash
             option(value="Language is not appearing properly") Language is not appearing properly
             option(value="Non functional (Performance issues / slowness / loading)") Non functional (Performance issues / slowness / loading)
@@ -46,16 +52,17 @@ block content
           label(for="upcomingfeature") Is there a feature you would like to see in the upcoming Firefox for Android release? Let us know here!
           textarea(name="upcomingfeature")
         div(class="input-group")
-          label(for="reproduce") <strong>Steps to reproduce*</strong> - Write down everything you did immediately before you arrived at the bug as clearly as possible
-          textarea(name="reproduce", required)
+          label(for="reproduce") <strong>Steps to reproduce&nbsp;<span>*</span></strong> - Write down everything you did immediately before you arrived at the bug as clearly as possible
+          textarea(name="reproduce", required, placeholder="1) Did ...\n2) Clicked on ...\n3) etc..")
         div(class="input-group")
-          label(for="expected") <strong>Expected behavior*</strong> - What were you hoping/expecting the browser to do?
+          label(for="expected") <strong>Expected behavior&nbsp;<span>*</span></strong> - What were you hoping/expecting the browser to do?
           textarea(name="expected", required)
         div(class="input-group")
-          label(for="actual") <strong>Actual behavior*</strong> - What was the actual result, what did the browser actually do?
+          label(for="actual") <strong>Actual behavior&nbsp;<span>*</span></strong> - What was the actual result, what did the browser actually do?
           textarea(name="actual", required)
         div(class="input-group")
-          p Did you try this in another browser?*
+          label Did you try this in another browser?
+            span &nbsp;*
           .choice-row
             .choice
               label(for="otherbrowser-yes") Yes

@@ -20,7 +20,7 @@ body {
 h1 {
   font-family: 'Zilla Slab', sans-serif;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 a {
@@ -84,8 +84,16 @@ form textarea {
   margin-bottom: 30px;
 }
 
+.input-group:first-of-type {
+  margin-top: 30px;
+}
+
 .input-group label {
   padding-bottom: 10px;
+}
+
+label span {
+  color: red;
 }
 
 .input-group input[type="file"] {
