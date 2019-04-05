@@ -11,6 +11,10 @@
   "type": {
     "content": "**Issue Type:** "
   },
+  "upcomingfeature": {
+    "heading": true,
+    "content": "# Wish for an upcoming feature"
+  },
   "reproduce": {
     "heading": true,
     "content": "# Steps to Reproduce"
@@ -26,10 +30,6 @@
   "otherbrowser": {
     "heading": true,
     "content": "# Tried in other browser"
-  },
-  "upcomingfeature": {
-    "heading": true,
-    "content": "# Wish for an upcoming feature"
   },
   "screenshot": {
     "image": true,

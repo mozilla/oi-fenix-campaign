@@ -18,8 +18,6 @@ block content
     .form-container
       h1 Report a Fenix bug
 
-      p Did you find a Web Compatibility bug? The website you’re visiting has a bug in Firefox but not in another browser? File your bug <a href="https://webcompat.com">here</a>.
-
       form(action="/create", method="POST", enctype="multipart/form-data")
         div(class="input-group")
           label(for="fenix") Fenix Version*
@@ -39,6 +37,10 @@ block content
             option(value="Functional (doesn’t behave as expected)") Functional (doesn’t behave as expected)
             option(value="Android app related (bugs not inside the browser)") Android app related (bugs not inside the browser)
             option(value="Other") Other
+        p Did you find a Web Compatibility bug? The website you’re visiting has a bug in Firefox but not in another browser? File your bug <a href="https://webcompat.com">here</a>.
+        div(class="input-group")
+          label(for="upcomingfeature") Is there a feature you would like to see in the upcoming Firefox for Android release? Let us know here!
+          textarea(name="upcomingfeature")
         div(class="input-group")
           label(for="reproduce") <strong>Steps to reproduce*</strong> - Write down everything you did immediately before you arrived at the bug as clearly as possible
           textarea(name="reproduce", required)
@@ -57,9 +59,6 @@ block content
         div(class="input-group")
           label(for="screenshot") Add a screenshot of what you see
           input(id="screenshot", type="file", name="screenshot")
-        div(class="input-group")
-          label(for="upcomingfeature") Is there a feature you would like to see in the upcoming Firefox for Android release? Let us know here!
-          textarea(name="upcomingfeature")
         div(class="input-group")
           label(for="github") Your GitHub account name if you have one
           input(id="github", type="text", name="github")
