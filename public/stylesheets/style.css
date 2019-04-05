@@ -190,3 +190,8 @@ footer ul li {
   padding-top: 30px;
   padding-bottom: 50px;
 }
+
+.field-note {
+  font-size: 0.7em;
+  color: #000;
+}

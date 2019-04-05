@@ -22,8 +22,7 @@ block content
       form(action="/create", method="POST", enctype="multipart/form-data")
         label Fields marked with <span>*</span> are required.
         div(class="input-group")
-          label(for="fenix") Fenix Version
-            span &nbsp;*
+          label(for="fenix") Fenix Version&nbsp;<span>*</span><br><span class="field-note">(please adjust to value found in about:fenix if you are using anything else than Fenix)</span>
           input(id="fenix", type="text", name="fenix", required, placeholder="TODO, automatically")
         div(class="input-group")
           label(for="device") Device
@@ -32,7 +31,7 @@ block content
         div(class="input-group")
           label(for="android") Android Version
             span &nbsp;*
-          input(id="android", type="text", name="android", required, placeholder="TODO, automatically")
+          input(id="android", type="text", name="android", required, placeholder="What Android version are you using?")
         div(class="input-group")
           label(for="type") Issue Type
             span &nbsp;*
