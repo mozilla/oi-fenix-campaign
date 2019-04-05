@@ -67,6 +67,7 @@ form input {
 }
 
 form select {
+  min-height: 30px;
   width: 75%;
 }
 
