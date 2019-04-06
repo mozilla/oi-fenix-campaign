@@ -10,5 +10,6 @@ services:
       - GITHUB_TOKEN=${GITHUB_TOKEN}
       - REPO=${REPO}
       - OWNER=${OWNER}
+      - BASE_URL="https://localhost:4000"
     command:
       sh -c 'npm run start:server'
