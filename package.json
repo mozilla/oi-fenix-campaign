@@ -1,6 +1,6 @@
 {
   "name": "mozilla-fenix-campaign",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "scripts": {
     "start": "docker-compose up",
     "start:server": "DEBUG=mozilla-fenix-campaign* node index.js"
