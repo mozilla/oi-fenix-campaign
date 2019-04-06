@@ -14,5 +14,5 @@ document.addEventListener('DOMContentLoaded', () => {
 function getAndroidVersion(ua = navigator.userAgent) {
   const userAgent = ua.toLowerCase();
   const match = userAgent.match(/android\s([0-9]+\.*)*/i);
-  return match;
+  return match ? match[1] : undefined;
 };
