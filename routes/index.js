@@ -28,7 +28,7 @@ router.post('/create', async (req, res) => {
     debug('ISSUE_CREATED_REDIRECTING_BACK', issueNumber);
     res.redirect(`/?success=true&submitted=true&issue=${issueNumber}`);
   } catch(error) {
-    debug('OH_NO_COULD_NOT_CREATE', err.message);
+    debug('OH_NO_COULD_NOT_CREATE', error.message);
     res.redirect('/?success=false&submitted=true');
   }
 });
