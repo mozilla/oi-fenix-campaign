@@ -25,9 +25,10 @@ router.post('/create', async (req, res) => {
     const fields = await formHandling.parseForm(req);
     const issueInfo = await githubBackend.createIssue(fields);
     const issueNumber = issueInfo.data.number;
-    debug('ISSUE_CREATED', issueNumber);
+    debug('ISSUE_CREATED_REDIRECTING_BACK', issueNumber);
     res.redirect(`/?success=true&submitted=true&issue=${issueNumber}`);
   } catch(error) {
+    debug('OH_NO_COULD_NOT_CREATE', err.message);
     res.redirect('/?success=false&submitted=true');
   }
 });
