@@ -2,20 +2,23 @@
 
 const debug = require('debug')('mozilla-fenix-campaign:routes');
 const express = require('express');
+const middleware = require('../middleware');
 const formHandling = require('../lib/formHandling');
 const githubBackend = require('../lib/githubBackend');
 
 const router = express.Router();
 
 const { OWNER, REPO } = process.env;
+const { csrfProtection } = middleware;
 
-router.get('/', async (req, res) => {
+router.get('/', csrfProtection, async (req, res) => {
   debug('INCOMING_REQUEST_INDEX');
   const issue = `https://github.com/${OWNER}/${REPO}/issues/${req.query.issue}`
   res.render('index', {
     success: /true/.test(req.query.success),
     submitted: /true/.test(req.query.submitted),
     issue,
+    csrf: req.session.csrf,
   });
 });
 

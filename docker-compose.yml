@@ -11,5 +11,6 @@ services:
       - REPO=${REPO}
       - OWNER=${OWNER}
       - BASE_URL="https://localhost:4000"
+      - SESSION_SECRET="foobarbaz"
     command:
       sh -c 'npm run start:server'

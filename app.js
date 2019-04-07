@@ -1,7 +1,15 @@
 'use strict';
 
 const express = require('express');
+const session = require('express-session');
 const path = require('path');
+
+const { SESSION_SECRET } = process.env;
+
+if (!SESSION_SECRET) {
+  console.error('SESSION_SECRET is not set!');
+  process.exit(1);
+}
 
 const index = require('./routes/index');
 
@@ -11,6 +19,19 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+const sessionOptions = {
+  secret: SESSION_SECRET,
+  resave: false,
+  saveUninitialized: true
+}
+
+if (app.get('env') === 'production') {
+  app.set('trust proxy', 1);
+  sessionOptions.cookie.secure = true;
+}
+
+app.use(session(sessionOptions));
 
 app.use('/', index);
 
