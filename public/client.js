@@ -9,6 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
   if (androidVersion) {
     androidVersionInput.value = androidVersion;
   }
+
+  const deviceInput = document.querySelector('#device');
+  deviceInput.addEventListener('change', (evt) => {
+    const value = evt.target.value;
+    localStorage.setItem('FENIX_BUG_DEVICE', value);
+  });
+  const savedDevice = localStorage.getItem('FENIX_BUG_DEVICE');
+  if (savedDevice) {
+    deviceInput.value = savedDevice;
+  }
 });
 
 function getAndroidVersion(ua = navigator.userAgent) {
