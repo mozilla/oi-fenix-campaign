@@ -1,19 +1,27 @@
 {
   "fenix": {
     "id": 100,
-    "content": "**Fenix Version:** "
+    "content": "**Fenix Version:** ",
+    "required": true,
+    "pattern": ".+"
   },
   "device": {
     "id": 200,
-    "content": "**Device:** "
+    "content": "**Device:** ",
+    "required": true,
+    "pattern": ".+"
   },
   "android": {
     "id": 300,
-    "content": "**Android Version:** "
+    "content": "**Android Version:** ",
+    "required": true,
+    "pattern": ".+"
   },
   "type": {
     "id": 500,
-    "content": "**Issue Type:** "
+    "content": "**Issue Type:** ",
+    "required": true,
+    "pattern": ".+"
   },
   "upcomingfeature": {
     "id": 1000,
@@ -23,21 +31,29 @@
   "reproduce": {
     "id": 600,
     "heading": true,
-    "content": "## Steps to Reproduce"
+    "content": "## Steps to Reproduce",
+    "required": true,
+    "pattern": ".+"
   },
   "expected": {
     "id": 700,
     "heading": true,
-    "content": "## Expected Behavior"
+    "content": "## Expected Behavior",
+    "required": true,
+    "pattern": ".+"
   },
   "actual": {
     "id": 800,
     "heading": true,
-    "content": "## Actual Behavior"
+    "content": "## Actual Behavior",
+    "required": true,
+    "pattern": ".+"
   },
   "otherbrowser": {
     "id": 550,
-    "content": "**Tried in other browser**: "
+    "content": "**Tried in other browser**: ",
+    "required": true,
+    "pattern": "^(☒|☐)$"
   },
   "screenshot": {
     "id": 900,

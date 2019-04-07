@@ -27,7 +27,7 @@ router.post('/create', async (req, res) => {
   try {
     const fields = await formHandling.parseForm(req);
     const issueInfo = await githubBackend.createIssue(fields);
-    const issueNumber = issueInfo.data.number;
+    const issueNumber = issueInfo && issueInfo.data && issueInfo.data.number;
     debug('ISSUE_CREATED_REDIRECTING_BACK', issueNumber);
     res.redirect(`/?success=true&submitted=true&issue=${issueNumber}`);
   } catch(error) {
