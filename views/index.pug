@@ -73,7 +73,7 @@ block content
           label(for="screenshot") Add a screenshot of what you see
           input(id="screenshot", type="file", accept="image/*", name="screenshot")
         div(class="input-group")
-          label(for="github") Your GitHub account name if you have one
+          label(for="github") Your GitHub account name if you have one<br><span class="field-note">(this will appear in the public GitHub issue)</span>
           input(id="github", type="text", name="github")
         input(id="csrf", type="hidden", name="_csrf", value=csrf)
         button(type="submit") Create Issue
