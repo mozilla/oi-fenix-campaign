@@ -17,12 +17,12 @@ block content
         p We're sorry.
 
     .form-container
-      h1 Report a Fenix bug
+      h1 Report a Firefox Preview bug
 
       form(action="/create", method="POST", enctype="multipart/form-data")
         label Fields marked with <span>*</span> are required.
         div(class="input-group")
-          label(for="fenix") Fenix Version&nbsp;<span>*</span><br><span class="field-note">(please adjust to value found in "Settings -> About Fenix" if you are filing this issue outside of Fenix)</span>
+          label(for="fenix") Firefox Preview Version&nbsp;<span>*</span><br><span class="field-note">(please adjust to value found in "Settings -> About Firefox Preview" if you are filing this issue outside of Firefox Preview)</span>
           input(id="fenix", type="text", name="fenix", required, placeholder="e.g. 1.0.1915 (Build #10981206)")
         div(class="input-group")
           label(for="device") What Android device are you using?
