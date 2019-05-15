@@ -104,6 +104,9 @@ label span {
 
 .input-group input[type="radio"] {
   display: inline-block;
+  width: 20px;
+  height: 100%;
+  margin: 0;
 }
 
 .input-group .choice-row {
