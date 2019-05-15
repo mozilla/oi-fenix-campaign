@@ -55,11 +55,6 @@
     "required": true,
     "pattern": "^(☒|☐)$"
   },
-  "screenshot": {
-    "id": 900,
-    "image": true,
-    "content": "## Screenshot"
-  },
   "github": {
     "id": 550,
     "content": "**GitHub Username**: "

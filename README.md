@@ -24,8 +24,6 @@ $ GITHUB_TOKEN=<yourGitHubToken> OWNER=<yourGitHubUsername> REPO=<yourGitHubRepo
 
 Now you can access the website for it at ```localhost:4000```.
 
-**Note:** When running locally, screenshots won't be appended to the resulting GitHub Issue
-
 ### Without Docker
 
 If you wanna use it without docker, you can run it by:
