@@ -71,6 +71,9 @@ block content
               label(for="otherbrowser-no") No
               input(id="otherbrowser-no", name="otherbrowser", type="radio", value="no", checked)
         div(class="input-group")
+          label(for="screenshot") Add a screenshot of what you see
+          input(id="screenshot", type="file", accept="image/*", name="screenshot")
+        div(class="input-group")
           label(for="github") Your GitHub account name if you have one<br><span class="field-note">(this will appear in the public GitHub issue)</span>
           input(id="github", type="text", name="github")
         button(type="submit") Create Issue
