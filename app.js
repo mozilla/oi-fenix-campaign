@@ -15,6 +15,17 @@ const index = require('./routes/index');
 
 const app = express();
 
+// Redirect to HTTPS if called with HTTP
+app.use((req, res, next) => {
+  const xForwardedProtoHeader = req.headers['x-forwarded-proto'];
+  if (xForwardedProtoHeader != 'https') {
+    res.redirect(`https://${req.headers.host}${req.originalUrl}`);
+    return;
+  }
+
+  next();
+});
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
