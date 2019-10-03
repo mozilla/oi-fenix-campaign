@@ -201,3 +201,8 @@ footer ul li {
   font-size: 0.7em;
   color: #000;
 }
+
+.hero {
+  padding-top: 25vh;
+  padding-bottom: 30vh;
+}

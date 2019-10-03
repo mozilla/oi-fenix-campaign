@@ -17,66 +17,69 @@ block content
         p We're sorry.
 
     .form-container
-      h1 Report a Firefox Preview bug
+      .hero
+        h1 BugHunter Campaign is finished
+        p The BugHunter campaign is finished. You can still keep <a href="https://discourse.mozilla.org/t/firefox-preview-nightly-for-developers-early-access/45810">testing Firefox Preview</a>. You found a bug? File your bug <a href="https://github.com/mozilla-mobile/fenix/issues/new/choose">in the Firefox Preview GitHub issue tracker</a>.
+      //- h1 Report a Firefox Preview bug
 
-      form(action="/create", method="POST", enctype="multipart/form-data")
-        label Fields marked with <span>*</span> are required.
-        div(class="input-group")
-          label(for="fenix") Firefox Preview Version&nbsp;<span>*</span><br><span class="field-note">(please adjust to value found in "Settings -> About Firefox Preview" if you are filing this issue outside of Firefox Preview)</span>
-          input(id="fenix", type="text", name="fenix", required, placeholder="e.g. 1.0.1915 (Build #10981206)")
-        div(class="input-group")
-          label(for="device") What Android device are you using?
-            span &nbsp;*
-          input(id="device", type="text", name="device", required, placeholder="e.g. Samsung S10, Google Pixel 2, Motorola G7")
-        div(class="input-group")
-          label(for="android") What Android Version are you using?
-            span &nbsp;*
-          input(id="android", type="text", name="android", required, placeholder="Android 9")
-        div(class="input-group")
-          label(for="type") Issue Type
-            span &nbsp;*
-          select(id="type", name="type", required)
-            option(value="", selected, disabled) Select Type...
-            option(value="Crash") Crash
-            option(value="Localization Issue - Text not appearing correctly in your language") Localization Issue - Text not appearing correctly in your language
-            option(value="Visual (User Interface)") Visual (User Interface)
-            option(value="Non functional (Performance issues / slowness / loading)") Non functional (Performance issues / slowness / loading)
-            option(value="Functional (doesn’t behave as expected)") Functional (doesn’t behave as expected)
-            option(value="Android app related (bugs not inside the browser)") Android app related (bugs not inside the browser)
-            option(value="Other") Other
-        .big-padding
-          h2 Did you find a Web Compatibility bug?
-          p The website you’re visiting has a bug in Firefox but not in another browser? File your bug <a href="https://webcompat.com">here</a>.
-        h2 Issue Description
-        div(class="input-group")
-          label(for="upcomingfeature") Is there a feature you would like to see in the upcoming Firefox for Android release? Let us know here!
-          textarea(name="upcomingfeature")
-        div(class="input-group")
-          label(for="reproduce") <strong>Steps to reproduce&nbsp;<span>*</span></strong> - Write down everything you did immediately before you arrived at the bug as clearly as possible
-          textarea(name="reproduce", required, placeholder="1) Did ...\n2) Clicked on ...\n3) etc..")
-        div(class="input-group")
-          label(for="expected") <strong>Expected behavior&nbsp;<span>*</span></strong> - What were you hoping/expecting the browser to do?
-          textarea(name="expected", required)
-        div(class="input-group")
-          label(for="actual") <strong>Actual behavior&nbsp;<span>*</span></strong> - What was the actual result, what did the browser actually do?
-          textarea(name="actual", required)
-        div(class="input-group")
-          label Did you try this in another browser?
-            span &nbsp;*
-          .choice-row
-            .choice
-              label(for="otherbrowser-yes") Yes
-              input(id="otherbrowser-yes", name="otherbrowser", type="radio", value="yes")
-            .choice
-              label(for="otherbrowser-no") No
-              input(id="otherbrowser-no", name="otherbrowser", type="radio", value="no", checked)
-        div(class="input-group")
-          label(for="screenshot") Add a screenshot of what you see
-          input(id="screenshot", type="file", accept="image/*", name="screenshot")
-        div(class="input-group")
-          label(for="github") Your GitHub account name if you have one<br><span class="field-note">(this will appear in the public GitHub issue)</span>
-          input(id="github", type="text", name="github")
-        button(type="submit") Create Issue
+      //- form(action="/create", method="POST", enctype="multipart/form-data")
+      //-   label Fields marked with <span>*</span> are required.
+      //-   div(class="input-group")
+      //-     label(for="fenix") Firefox Preview Version&nbsp;<span>*</span><br><span class="field-note">(please adjust to value found in "Settings -> About Firefox Preview" if you are filing this issue outside of Firefox Preview)</span>
+      //-     input(id="fenix", type="text", name="fenix", required, placeholder="e.g. 1.0.1915 (Build #10981206)")
+      //-   div(class="input-group")
+      //-     label(for="device") What Android device are you using?
+      //-       span &nbsp;*
+      //-     input(id="device", type="text", name="device", required, placeholder="e.g. Samsung S10, Google Pixel 2, Motorola G7")
+      //-   div(class="input-group")
+      //-     label(for="android") What Android Version are you using?
+      //-       span &nbsp;*
+      //-     input(id="android", type="text", name="android", required, placeholder="Android 9")
+      //-   div(class="input-group")
+      //-     label(for="type") Issue Type
+      //-       span &nbsp;*
+      //-     select(id="type", name="type", required)
+      //-       option(value="", selected, disabled) Select Type...
+      //-       option(value="Crash") Crash
+      //-       option(value="Localization Issue - Text not appearing correctly in your language") Localization Issue - Text not appearing correctly in your language
+      //-       option(value="Visual (User Interface)") Visual (User Interface)
+      //-       option(value="Non functional (Performance issues / slowness / loading)") Non functional (Performance issues / slowness / loading)
+      //-       option(value="Functional (doesn’t behave as expected)") Functional (doesn’t behave as expected)
+      //-       option(value="Android app related (bugs not inside the browser)") Android app related (bugs not inside the browser)
+      //-       option(value="Other") Other
+      //-   .big-padding
+      //-     h2 Did you find a Web Compatibility bug?
+      //-     p The website you’re visiting has a bug in Firefox but not in another browser? File your bug <a href="https://webcompat.com">here</a>.
+      //-   h2 Issue Description
+      //-   div(class="input-group")
+      //-     label(for="upcomingfeature") Is there a feature you would like to see in the upcoming Firefox for Android release? Let us know here!
+      //-     textarea(name="upcomingfeature")
+      //-   div(class="input-group")
+      //-     label(for="reproduce") <strong>Steps to reproduce&nbsp;<span>*</span></strong> - Write down everything you did immediately before you arrived at the bug as clearly as possible
+      //-     textarea(name="reproduce", required, placeholder="1) Did ...\n2) Clicked on ...\n3) etc..")
+      //-   div(class="input-group")
+      //-     label(for="expected") <strong>Expected behavior&nbsp;<span>*</span></strong> - What were you hoping/expecting the browser to do?
+      //-     textarea(name="expected", required)
+      //-   div(class="input-group")
+      //-     label(for="actual") <strong>Actual behavior&nbsp;<span>*</span></strong> - What was the actual result, what did the browser actually do?
+      //-     textarea(name="actual", required)
+      //-   div(class="input-group")
+      //-     label Did you try this in another browser?
+      //-       span &nbsp;*
+      //-     .choice-row
+      //-       .choice
+      //-         label(for="otherbrowser-yes") Yes
+      //-         input(id="otherbrowser-yes", name="otherbrowser", type="radio", value="yes")
+      //-       .choice
+      //-         label(for="otherbrowser-no") No
+      //-         input(id="otherbrowser-no", name="otherbrowser", type="radio", value="no", checked)
+      //-   div(class="input-group")
+      //-     label(for="screenshot") Add a screenshot of what you see
+      //-     input(id="screenshot", type="file", accept="image/*", name="screenshot")
+      //-   div(class="input-group")
+      //-     label(for="github") Your GitHub account name if you have one<br><span class="field-note">(this will appear in the public GitHub issue)</span>
+      //-     input(id="github", type="text", name="github")
+      //-   button(type="submit") Create Issue
 
   footer
     a(href="https://mozilla.org")
